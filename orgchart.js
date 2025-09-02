@@ -43,9 +43,10 @@ $(function() {
     $('#chart-container').append(`<i class="oci oci-spinner spinner"></i>`);
     $.ajax({
     'url': 'people.csv',
-    'dataType': 'csv'
+    'dataType': 'text'
     })
     .done(function(data, textStatus, jqXHR) {
+        console.log('AJAX request successful');
         const employeeData = csvToArray(data);
         const orgData = processData(employeeData);
         $('#chart-container').orgchart({
