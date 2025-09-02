@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Organization Chart Plugin</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/svgs/solid/sitemap.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/orgchart@2.1.7/dist/css/jquery.orgchart.min.css">
+  <style>
+    #chart-container {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+    .orgchart {
+      background-image: none;
+    }
+    .orgchart .node .title {
+      width: auto;
+    }
+    .orgchart .node .content {
+      width: auto;
+      padding: 0 3px;
+    }
+      </style>
+</head>
+<body>
+  <div id="chart-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/orgchart@2.1.7/dist/js/jquery.orgchart.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      // Call Apps Script function getEmployeeData and handle the response
+      google.script.run.withSuccessHandler(function(datasource) {
+        $('#chart-container').orgchart({
+          'data' : datasource,
+          'nodeContent': 'title',
+      'verticalLevel': 4
+       });
+      }).getEmployeeData(); // Calls the Apps Script function
+    });
+  </script>
+</body>
+</html>
