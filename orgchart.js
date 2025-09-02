@@ -60,7 +60,7 @@ $(function() {
         'pan': true,
         'createNode': function($node, data) {
             var secondMenuIcon = $('<i>', {
-            'class': 'oci oci-info-circle second-menu-icon',
+            'class': 'fa-regular fa-circle-info second-menu-icon',
             click: function() {
                 $(this).siblings('.second-menu').toggle();
                 $(this).siblings('.second-menu').load('https://us1.teamdynamix.com/tdapp/app/form/start?c=NjU3NDc5OGEtMjRkNi00NTYyLWFlNmUtMGZhNDMyNzRlNWYy&t=cVlSQTlBPT1xbTRiQTVhRU5hbzYxbDAxNm1DK2N3UnpnNG5rQUJMN3JMdEJrZ2dUeWFFS3V2eTFYai9zeHVyWWZDajhDV3JjWUhZelNLWGpXKzlNTFBtem5SSU0vZz09&tdxusername=ncs21067@email.vccs.edu');
