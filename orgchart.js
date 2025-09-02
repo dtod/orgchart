@@ -11,13 +11,13 @@ function processData(employeeData) {
     
     // Skip header row
     for (const row in employeeData) {
-        const id = row[organizationPerson.title];
+        const id = row["organizationPerson.title"];
         
         employees[id] = {
         id: id,
         name: row.displayName,
         title: id,
-        supervisorId: row[user.manager.title],
+        supervisorId: row["user.manager.title"],
         children: []
         };
         
