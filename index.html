@@ -15,11 +15,33 @@
       background-image: none;
     }
     .orgchart .node .title {
+      min-width: 160px;
       width: auto;
     }
     .orgchart .node .content {
       width: auto;
       padding: 0 3px;
+    }
+
+    .orgchart .second-menu-icon {
+      transition: opacity .5s;
+      opacity: 0;
+      right: -5px;
+      top: -5px;
+      z-index: 2;
+      position: absolute;
+    }
+
+    .orgchart .node:hover .second-menu-icon { opacity: 1; }
+    .orgchart .node .second-menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: -70px;
+      border-radius: 35px;
+      box-shadow: 0 0 10px 1px #999;
+      background-color: #fff;
+      z-index: 10;
     }
       </style>
 </head>
