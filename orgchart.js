@@ -14,7 +14,7 @@ function processData(employeeData) {
         const row = employeeData[rownum];
         // Assuming CSV columns: displayName, organizationPerson.title, user.manager.title
         const supervisorId = row["user.manager.title"];
-        const id = row["organizationPerson.title"];
+        const id = row["organizationalPerson.title"];
         
         employees[id] = {
         id: id,
