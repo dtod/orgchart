@@ -30,14 +30,22 @@
   <script src="https://cdn.jsdelivr.net/npm/orgchart@2.1.7/dist/js/jquery.orgchart.min.js"></script>
   <script type="text/javascript">
     $(function() {
-      // Call Apps Script function getEmployeeData and handle the response
-      google.script.run.withSuccessHandler(function(datasource) {
-        $('#chart-container').orgchart({
-          'data' : datasource,
-          'nodeContent': 'title',
-      'verticalLevel': 4
-       });
-      }).getEmployeeData(); // Calls the Apps Script function
+
+      $('#chart-container').append(`<i class="oci oci-spinner spinner"></i>`);
+      $.ajax({
+        'url': 'people.csv',
+        'dataType': 'csv'
+      })
+        .done(function(data, textStatus, jqXHR) {
+          $('#chart-container').orgchart({
+            'data': data,
+            'nodeContent': 'title'
+          });
+        })
+        .always(function() {
+          $('#chart-container').children('.spinner').remove();
+        });
+      
     });
   </script>
 </body>
