@@ -61,6 +61,9 @@ $(function() {
         'createNode': function($node, data) {
             var secondMenuIcon = $('<i>', {
             'class': 'fa-solid fa-circle-info second-menu-icon',
+            mouseover: function() { 
+                $('.second-menu').not($(this).siblings('.second-menu')).hide(); 
+            },
             click: function() {
                 $('.second-menu').not($(this).siblings('.second-menu')).hide();
                 $(this).siblings('.second-menu').toggle();
