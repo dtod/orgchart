@@ -34,7 +34,7 @@ function processData(employeeData) {
         }
     }
     
-    Logger.log(JSON.stringify(root));
+    console.log(JSON.stringify(root));
     return root;
 }
     
