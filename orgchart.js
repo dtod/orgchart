@@ -21,6 +21,7 @@ function processData(employeeData) {
             name: row.displayName,
             title: id,
             supervisorId: supervisorId,
+            mail: row['user.mail'],
             children: []
         };
         
@@ -62,7 +63,7 @@ $(function() {
             var thisEmployee = employeeData.find(item => item.displayName == `${data.name}`);
             var secondMenuIcon = $('<a>', {
             'class': 'fa-solid fa-circle-info second-menu-icon',
-            'href': "https://contacts.google.com/" + thisEmployee["user.mail"],
+            'href': `https://contacts.google.com/${data.mail}`,
             'target': "detail"
             });
             $node.append(secondMenuIcon);
