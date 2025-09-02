@@ -1,7 +1,7 @@
 
 function csvToArray(csvData) {
     var result = $.csv.toObjects(csvData);
-    console.log(result);
+    // console.log(result);
     return(result);
 }
 
@@ -17,11 +17,11 @@ function processData(employeeData) {
         const id = row["organizationalPerson.title"];
         
         employees[id] = {
-        id: id,
-        name: row.displayName,
-        title: id,
-        supervisorId: supervisorId,
-        children: []
+            id: id,
+            name: row.displayName,
+            title: id,
+            supervisorId: supervisorId,
+            children: []
         };
         
         // Find the root (no supervisor_id)
@@ -38,7 +38,7 @@ function processData(employeeData) {
         }
     }
     
-    console.log(JSON.stringify(root));
+    // console.log(JSON.stringify(root));
     return root;
 }
     
@@ -50,7 +50,7 @@ $(function() {
     'dataType': 'text'
     })
     .done(function(data, textStatus, jqXHR) {
-        console.log('AJAX request successful');
+        // console.log('AJAX request successful');
         const employeeData = csvToArray(data);
         const orgData = processData(employeeData);
         $('#chart-container').orgchart({
