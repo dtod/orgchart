@@ -2,6 +2,7 @@
 function csvToArray(csvData) {
     var result = $.csv.toObjects(csvData);
     console.log(result);
+    return(result);
 }
 
 function processData(employeeData) {
