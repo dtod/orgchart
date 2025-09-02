@@ -10,20 +10,23 @@ function processData(employeeData) {
     let root = null;
     
     // Skip header row
-    for (const row in employeeData) {
+    for (const rownum in employeeData) {
+        const row = employeeData[rownum];
+        // Assuming CSV columns: displayName, organizationPerson.title, user.manager.title
+        const supervisorId = row["user.manager.title"];
         const id = row["organizationPerson.title"];
         
         employees[id] = {
         id: id,
         name: row.displayName,
         title: id,
-        supervisorId: row["user.manager.title"],
+        supervisorId: supervisorId,
         children: []
         };
         
         // Find the root (no supervisor_id)
         if (supervisorId === "") {
-        root = employees[id];
+            root = employees[id];
         }
     }
     
