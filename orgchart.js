@@ -44,7 +44,7 @@ function processData(employeeData) {
     
 $(function() {
 
-    $('#chart-container').append(`<i class="oci oci-spinner spinner"></i>`);
+    $('#chart-container').append(`<i class="fa-solid fa-spinner spinner"></i>`);
     $.ajax({
     'url': 'people.csv',
     'dataType': 'text'
@@ -62,6 +62,7 @@ $(function() {
             var secondMenuIcon = $('<i>', {
             'class': 'fa-solid fa-circle-info second-menu-icon',
             click: function() {
+                $('.second-menu').not($(this).siblings('.second-menu')).hide();
                 $(this).siblings('.second-menu').toggle();
                 $(this).siblings('.second-menu').load('https://us1.teamdynamix.com/tdapp/app/form/start?c=NjU3NDc5OGEtMjRkNi00NTYyLWFlNmUtMGZhNDMyNzRlNWYy&t=cVlSQTlBPT1xbTRiQTVhRU5hbzYxbDAxNm1DK2N3UnpnNG5rQUJMN3JMdEJrZ2dUeWFFS3V2eTFYai9zeHVyWWZDajhDV3JjWUhZelNLWGpXKzlNTFBtem5SSU0vZz09&tdxusername=ncs21067@email.vccs.edu');
             }
