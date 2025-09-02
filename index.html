@@ -5,6 +5,7 @@
   <title>Organization Chart Plugin</title>
   <link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/svgs/solid/sitemap.svg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/orgchart@2.1.7/dist/css/jquery.orgchart.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     #chart-container {
       width: 100%;
@@ -32,8 +33,10 @@
       position: absolute;
     }
 
-    .orgchart .second-menu-icon::before { background-color: #449d44; }
-    .orgchart .node:hover .second-menu-icon { opacity: 1; }
+    .orgchart .node:hover .second-menu-icon { 
+      opacity: 1; 
+      cursor: pointer;
+    }
 
     .orgchart .node .second-menu {
       display: none;
