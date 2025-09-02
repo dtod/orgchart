@@ -15,6 +15,10 @@
     .orgchart {
       background-image: none;
     }
+    .orgchart .node:hover { 
+      z-index:10 
+    }
+
     .orgchart .node .title {
       min-width: 160px;
       width: auto;
@@ -29,7 +33,7 @@
       opacity: 0;
       right: -5px;
       top: -5px;
-      z-index: 2;
+      z-index: 20;
       position: absolute;
     }
 
@@ -41,7 +45,7 @@
     .orgchart .node .second-menu {
       display: none;
       position: absolute;
-      top: 0;
+      top: 20px;
       right: -70px;
       border-radius: 10px;
       padding: 5px;
