@@ -35,7 +35,8 @@ function processData(employeeData) {
     for (const id in employees) {
         const employee = employees[id];
         const childrenCt = employeeData.filter((item) => item["user.manager.title"] == employee.title).length;
-        // if not the root and has more than 4 direct reports, mark as hybrid
+        // if not the root and has more than 4 direct reports, mark as hybrid, 
+        // which will display vertically instead of horizontally
         if (childrenCt > 4 && employee.id != root.id) {
             employee.hybrid = true;
         }
