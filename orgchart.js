@@ -34,6 +34,10 @@ function processData(employeeData) {
     // Build the tree structure
     for (const id in employees) {
         const employee = employees[id];
+        const childrenCt = employeeData.filter((item) => item["user.manager.title"] == employee.title).length;
+        if (childrenCt > 4){
+            employee.hybrid = true;
+        }
         if (employee.supervisorId !== "" && employees[employee.supervisorId]) {
             employees[employee.supervisorId].children.push(employee);
         }
