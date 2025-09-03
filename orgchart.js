@@ -35,7 +35,7 @@ function processData(employeeData) {
     for (const id in employees) {
         const employee = employees[id];
         const childrenCt = employeeData.filter((item) => item["user.manager.title"] == employee.title).length;
-        if (childrenCt > 4){
+        if (childrenCt > 4 && employee.supervisorId != root.id) {
             employee.hybrid = true;
         }
         if (employee.supervisorId !== "" && employees[employee.supervisorId]) {
