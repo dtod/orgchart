@@ -33,7 +33,11 @@ function processData(employeeData) {
         };
         
         // Find the root (no supervisor_id)
-        if (supervisorId === "") {
+        // if (supervisorId.trim() === "") {
+        //     root = employees[id];
+        // }
+
+        if (id == '3803059') {
             root = employees[id];
         }
     }

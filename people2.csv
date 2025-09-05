@@ -169,6 +169,7 @@ IDENTIFIER_NAME,REPORTS_TO,NAME_DISPLAY,JOBTITLE,DEPT_DESCR,POSN_DESCR,POSITION_
 3773382,6820694,Michael Smith,Info Technology Manager II,ITS ENTERPRISE SERV,12 month - Admin - Asst Prof,26100099
 3784908,3453773,Rhonda Lubbe,Gen Admin Supv I/Coord I,INSTITUTIONAL ADVANC,Vice Chancellor,261R0054
 3800014,3304729,Mary Fitzgerald,12month-Professional-Instructo,ACADEMIC SERV & RES,Director,261FA041
+3800020,5473439,Yolanda Crewe,Adjunct - Professor,School - Humanities & Soc Sci,Dean,283A0037
 3800020,6376558,Yolanda Crewe,12 month - Admin - Instructor,WFD - MIDDLE COLLEGE,Associate Vice Chancellor,261FA039
 3800188,3802124,Melody Crenshaw,12 month-Professional-Lecturer,ACADEMIC SERV & RES,12 month-Professional-Lecturer,261GA044
 3800210,0644035,James Reinke,Info Technology Specialist III,INFO TECH SERVICES,Info Technology Manager II,26100012
@@ -196,6 +197,7 @@ IDENTIFIER_NAME,REPORTS_TO,NAME_DISPLAY,JOBTITLE,DEPT_DESCR,POSN_DESCR,POSITION_
 3802965,6502328,Malinda Carter,12 month - Admin - Professor,HUMAN RES SVC & AA,Gen Admin Supv I/Coord I,261FA004
 3802969,2372567,Elizabeth Lake,Info Technology Specialist III,Chief Transformation Office,Info Technology Manager I,26100127
 3802998,4032700,Matthew Anthony,Prog Admin Specialist III,ACADEMIC SERV & RES,12 month - Admin - Instructor,261R0101
+3803059,1730879,Dennis Moynihan,12 month - Administrative - In,SSC Administration,Vice Chancellor Fin + Cap Rsrs,270FA305
 3803082,1895871,Jody McKay,Info Technology Specialist III,ITS ENTERPRISE SERV,Info Technology Manager I,26100066
 3803119,0644035,Thomas Colgin,Info Technology Specialist III,INFO TECH SERVICES,Info Technology Manager II,26100056
 3803136,6130646,Casey Yocum,12 month - Admin - Lecturer,Student Success Center,Director,261GA043
@@ -316,4 +318,3 @@ IDENTIFIER_NAME,REPORTS_TO,NAME_DISPLAY,JOBTITLE,DEPT_DESCR,POSN_DESCR,POSITION_
 7772406,1901545,Alexandria Davis,Intern,VFCCE Great Expectations,Chief Operating Officer,261W0103
 7807051,5731738,William Sheehan,Architect/Engineer Mgr II,FAC & MNGMT SERVICES,Architect/Engineering Mgr II,261R0047
 7972955,3801113,Upama Dhakal,Info Technology Specialist II,ITS ENTERPRISE SERV,Info Technology Manager I,261W0017
-3803059,,Dennis Moynihan,CIO,ITS ENTERPRISE SERV,,
