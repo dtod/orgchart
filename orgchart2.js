@@ -60,7 +60,27 @@ function processData(employeeData) {
             employee.className = "top-level-node";
         }
     }
-    
+	
+	// children now exist, rewalk to set classes
+	var childLevel = 1;
+	function walkPerson(node){
+		if (node.className) {
+            node.className += " level-" + childLevel;
+        }
+        else{
+            node.className = "level-" + childLevel;
+        }
+		if (node.children.length > 0){
+			childLevel++;
+            node.className += " manager";
+			for (var person in node.children){
+				walkPerson(node.children[person]);
+			}
+			childLevel--;
+		}
+	}
+	walkPerson(root);
+
     // console.log(JSON.stringify(root));
     return root;
 }
