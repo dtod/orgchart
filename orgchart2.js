@@ -40,6 +40,7 @@ function processData(employeeData) {
 		// hard-code dennis moynihan as root of tree
         if (row.cn == 'dm23348') {
             root = employees[id];
+            root.className = "root-node";
         }
     }
     
@@ -54,6 +55,9 @@ function processData(employeeData) {
         }
         if (employee.supervisorId !== "" && employees[employee.supervisorId]) {
             employees[employee.supervisorId].children.push(employee);
+        }
+        if (employee.supervisorId === root.id) {
+            employee.className = "top-level-node";
         }
     }
     
