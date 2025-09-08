@@ -4,4 +4,4 @@ Testing locally - python -m http.server
 
 Extract from HR DEVL is possible now, but position descriptions are not very useful -- also email values are junk in non-production environments
 
-https://localhost:8000/index.html
+http://localhost:8000/index.html

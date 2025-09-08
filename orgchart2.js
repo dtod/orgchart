@@ -37,7 +37,8 @@ function processData(employeeData) {
         //     root = employees[id];
         // }
 
-        if (id == '3803059') {
+		// hard-code dennis moynihan as root of tree
+        if (row.cn == 'dm23348') {
             root = employees[id];
         }
     }
