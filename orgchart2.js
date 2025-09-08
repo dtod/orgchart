@@ -16,8 +16,8 @@ function processData(employeeData) {
             continue;
         }
         // Assuming CSV columns: displayName, organizationPerson.title, user.manager.title
-        var supervisorId = row["REPORTS_TO"];
-        const id = row["IDENTIFIER_NAME"];
+        var supervisorId = row.REPORTS_TO;
+        const id = row.IDENTIFIER_NAME;
 
         if (supervisorId == '1907711') {
             supervisorId = "3803059"
@@ -25,10 +25,10 @@ function processData(employeeData) {
         
         employees[id] = {
             id: id,
-            name: row["NAME_DISPLAY"],
-            title: row["JOBTITLE"],
+            name: row.NAME_DISPLAY,
+            title: row.JOBTITLE,
             supervisorId: supervisorId,
-            // mail: row['user.mail'],
+            mail: row.email,
             children: []
         };
         
@@ -80,7 +80,7 @@ $(function() {
             var thisEmployee = employeeData.find(item => item.displayName == `${data.name}`);
             var secondMenuIcon = $('<a>', {
             'class': 'fa-solid fa-circle-info second-menu-icon',
-            'href': `https://contacts.google.com/${data.mail}`,
+            'href': `https://us1.teamdynamix.com/tdapp/form/rotcmo?__cust=vccs&tdxusername=${data.mail}`,
             'target': "detail"
             });
             $node.append(secondMenuIcon);
